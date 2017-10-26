@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>CoolProp Web</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
-    <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet">
+  <title>CoolProp Web</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/styles.css" rel="stylesheet">
   <style type="text/css">
-:root #content > #right > .dose > .dosesingle,
-:root #content > #center > .dose > .dosesingle
-{ display: none !important; }</style></head>
+    :root #content>#right>.dose>.dosesingle,
+    :root #content>#center>.dose>.dosesingle {
+      display: none !important;
+    }
+  </style>
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">CoolProp Web</a>
-    </nav>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">CoolProp Web</a>
+  </nav>
 
-    <main role="main" class="container">
+  <main role="main" class="container">
 
-      <div class="row">
-        <div class="col-md-6">
-			<h2>Datos</h2>
-				<form action="#" method="post">
-					<div class="fluido">
-					  <select>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Datos</h2>
+        <form action="#" method="post">
+          <div class="fluido">
+            <select>
 							<option>Agua</option>
 							<option>Aire</option>
 							<option>R22</option>
 							<option>R134a</option>
 							<option>R717</option>
 					  </select>
-					</div>
+          </div>
 
-					<div class="prop1">
-					  <select>
+          <div class="prop1">
+            <select>
 							<option>Densidad [kg/m³]</option>
 							<option>Temperatura [ºC]</option>
 							<option>Presión [kPa]</option>
@@ -49,10 +56,10 @@
 							<option>Entalpía [kJ/kg]</option>
 							<option>Entropía [kJ/(kg*K)]</option>
 					  </select>
-					  <input type="text">
-					</div>
-					<div class="prop2">
-					  <select>
+            <input type="text">
+          </div>
+          <div class="prop2">
+            <select>
 							<option>Densidad [kg/m³]</option>
 							<option>Temperatura [ºC]</option>
 							<option>Presión [kPa]</option>
@@ -60,71 +67,74 @@
 							<option>Entalpía [kJ/kg]</option>
 							<option>Entropía [kJ/(kg*K)]</option>
 					  </select>
-					  <input type="text">
-					</div>
-					  <input type="submit" value="Calcular">
-				</form>
-		</div>
-        <div class="col-md-6">
-		<h2>Resultados</h2>
-				<p>
-					Estado:
-					<span class="resultado" id="estado">0.0</span>
-				</p>
-				<p>
-					Densidad [kg/m³]:
-					<span class="resultado" id="densidad">0.0</span>
-				</p>
-				<p>
-					Temperatura [ºC]:
-					<span class="resultado" id="temperatura">0.0</span>
-				</p>
-				<p>
-					Presión [kPa]:
-					<span class="resultado" id="presion">0.0</span>
-				</p>
-				<p>
-					Título de vapor [%]:
-					<span class="resultado" id="titulovapor">0.0</span>
-				</p>
-				<p>
-					Entalpía [kJ/kg]:
-					<span class="resultado" id="entalpia">0.0</span>
-				</p>
-				<p>
-					Entropía [kJ/(kg*K)]:
-					<span class="resultado" id="entropia">0.0</span>
-				</p>
-				<p>
-					Energía interna [kJ/kg)]:
-					<span class="resultado" id="energiainterna">0.0</span>
-				</p>
-				<p>
-					Calor específico a p cte [kJ/(kg*K)]:
-					<span class="resultado" id="calorp">0.0</span>
-				</p>
-				<p>
-					Calor específico a v cte [kJ/(kg*K)]:
-					<span class="resultado" id="calorv">0.0</span>
-				</p>
-				<p>
-					Conductividad térmica [W/(m*K)]:
-					<span class="resultado" id="conductividad">0.0</span>
-				</p>
-				<p>
-					Viscosidad dinámica [Pa*s]:
-					<span class="resultado" id="viscosidad">0.0</span>
-				</p>
-		</div>
+            <input type="text">
+          </div>
+          <input type="submit" value="Calcular">
+        </form>
       </div>
-
-    </main><!-- /.container -->
-
-	<footer class="footer">
-      <div class="container">
-        <span class="text-muted">Juanma Donado</span>
+      <div class="col-md-6">
+        <h2>Resultados</h2>
+        <p>
+          Estado:
+          <span class="resultado" id="estado">0.0</span>
+        </p>
+        <p>
+          Densidad [kg/m³]:
+          <span class="resultado" id="densidad">0.0</span>
+        </p>
+        <p>
+          Temperatura [ºC]:
+          <span class="resultado" id="temperatura">0.0</span>
+        </p>
+        <p>
+          Presión [kPa]:
+          <span class="resultado" id="presion">0.0</span>
+        </p>
+        <p>
+          Título de vapor [%]:
+          <span class="resultado" id="titulovapor">0.0</span>
+        </p>
+        <p>
+          Entalpía [kJ/kg]:
+          <span class="resultado" id="entalpia">0.0</span>
+        </p>
+        <p>
+          Entropía [kJ/(kg*K)]:
+          <span class="resultado" id="entropia">0.0</span>
+        </p>
+        <p>
+          Energía interna [kJ/kg)]:
+          <span class="resultado" id="energiainterna">0.0</span>
+        </p>
+        <p>
+          Calor específico a p cte [kJ/(kg*K)]:
+          <span class="resultado" id="calorp">0.0</span>
+        </p>
+        <p>
+          Calor específico a v cte [kJ/(kg*K)]:
+          <span class="resultado" id="calorv">0.0</span>
+        </p>
+        <p>
+          Conductividad térmica [W/(m*K)]:
+          <span class="resultado" id="conductividad">0.0</span>
+        </p>
+        <p>
+          Viscosidad dinámica [Pa*s]:
+          <span class="resultado" id="viscosidad">0.0</span>
+        </p>
       </div>
-    </footer>
+    </div>
 
-    <script src="js/coolprop.js"></script>
-</body></html>
+  </main>
+  <!-- /.container -->
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Juanma Donado</span>
+    </div>
+  </footer>
+
+  <script src="js/coolprop.js"></script>
+</body>
+
+</html>
