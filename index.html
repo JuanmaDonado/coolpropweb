@@ -36,82 +36,72 @@
     <div class="row">
       <div class="col-md-6">
         <h2>Datos</h2>
-        <form action="#" method="post">
-          <div class="fluido">
-            <select>
-							<option>Agua</option>
-							<option>Aire</option>
-							<option>R22</option>
-							<option>R134a</option>
-							<option>R717</option>
+        <select id="fluido">
+							<option value="Water">Agua</option>
+							<option value="Air">Aire</option>
+							<option value="R22">R22</option>
+							<option value="R134a">R134a</option>
+							<option value="R717">R717</option>
 					  </select>
-          </div>
-
-          <div class="prop1">
-            <select>
-							<option>Densidad [kg/m³]</option>
-							<option>Temperatura [ºC]</option>
-							<option>Presión [kPa]</option>
-							<option>Título de vapor [%]</option>
-							<option>Entalpía [kJ/kg]</option>
-							<option>Entropía [kJ/(kg*K)]</option>
+        <br>
+        <select id="prop1">
+							<option value="D">Densidad [kg/m³]</option>
+							<option value="T">Temperatura [K]</option>
+							<option value="P">Presión [Pa]</option>
+							<option value="Q">Título de vapor [0-1]</option>
+							<option value="H">Entalpía [J/kg]</option>
+							<option value="S">Entropía [J/(kg*K)]</option>
 					  </select>
-            <input type="text">
-          </div>
-          <div class="prop2">
-            <select>
-							<option>Densidad [kg/m³]</option>
-							<option>Temperatura [ºC]</option>
-							<option>Presión [kPa]</option>
-							<option>Título de vapor [%]</option>
-							<option>Entalpía [kJ/kg]</option>
-							<option>Entropía [kJ/(kg*K)]</option>
+        <input type="text" id="prop1val">
+        <br>
+        <select id="prop2">
+							<option value="D">Densidad [kg/m³]</option>
+							<option value="T">Temperatura [K]</option>
+							<option value="P">Presión [Pa]</option>
+							<option value="Q">Título de vapor [0-1]</option>
+							<option value="H">Entalpía [J/kg]</option>
+							<option value="S">Entropía [J/(kg*K)]</option>
 					  </select>
-            <input type="text">
-          </div>
-          <input type="submit" value="Calcular">
-        </form>
+        <input type="text" id="prop2val">
+        <br>
+        <input type="button" id="calcular" value="Calcular">
       </div>
       <div class="col-md-6">
         <h2>Resultados</h2>
-        <p>
-          Estado:
-          <span class="resultado" id="estado">0.0</span>
-        </p>
         <p>
           Densidad [kg/m³]:
           <span class="resultado" id="densidad">0.0</span>
         </p>
         <p>
-          Temperatura [ºC]:
+          Temperatura [K]:
           <span class="resultado" id="temperatura">0.0</span>
         </p>
         <p>
-          Presión [kPa]:
+          Presión [Pa]:
           <span class="resultado" id="presion">0.0</span>
         </p>
         <p>
-          Título de vapor [%]:
+          Título de vapor [0-1]:
           <span class="resultado" id="titulovapor">0.0</span>
         </p>
         <p>
-          Entalpía [kJ/kg]:
+          Entalpía [J/kg]:
           <span class="resultado" id="entalpia">0.0</span>
         </p>
         <p>
-          Entropía [kJ/(kg*K)]:
+          Entropía [J/(kg*K)]:
           <span class="resultado" id="entropia">0.0</span>
         </p>
         <p>
-          Energía interna [kJ/kg)]:
+          Energía interna [J/kg)]:
           <span class="resultado" id="energiainterna">0.0</span>
         </p>
         <p>
-          Calor específico a p cte [kJ/(kg*K)]:
+          Calor específico a p cte [J/(kg*K)]:
           <span class="resultado" id="calorp">0.0</span>
         </p>
         <p>
-          Calor específico a v cte [kJ/(kg*K)]:
+          Calor específico a v cte [J/(kg*K)]:
           <span class="resultado" id="calorv">0.0</span>
         </p>
         <p>
@@ -135,6 +125,8 @@
   </footer>
 
   <script src="js/coolprop.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
